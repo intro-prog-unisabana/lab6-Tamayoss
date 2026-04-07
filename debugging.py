@@ -1,13 +1,14 @@
 def show_inventory(inventory):
-    print("Current Inventory:\n")
+    print("\nCurrent Inventory:")
     # ¿Es esta la forma correcta de iterar sobre el diccionario?
-    for fruit, stock in inventory.items:
+    for fruit, stock in inventory.items():
         print(f"{fruit}: {stock}")
     print()
 
 def add_fruit(inventory):
     fruit = input("Enter the name of the new fruit: ").strip()
-    if fruit in inventory():        print(f"{fruit} already exists!\n")
+    if fruit in inventory():        
+        print(f"{fruit} already exists!\n")
     else:
         stock = input(f"Enter stock for {fruit}: ")
         # Algo está mal con la sintaxis aquí...
