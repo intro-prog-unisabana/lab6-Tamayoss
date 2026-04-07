@@ -7,8 +7,7 @@ def show_inventory(inventory):
 
 def add_fruit(inventory):
     fruit = input("Enter the name of the new fruit: ").strip()
-    if fruit in inventory.keys():
-        print(f"{fruit} already exists!\n")
+    if fruit in inventory():        print(f"{fruit} already exists!\n")
     else:
         stock = input(f"Enter stock for {fruit}: ")
         # Algo está mal con la sintaxis aquí...
