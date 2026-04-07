@@ -1,27 +1,17 @@
 # Write your code here!
 def employee_print(employee_info):
-    datos = employee_info.copy()
-    
-    llaves_base = ["Name", "Salary", "Role"]
-    
-    for key in llaves_base:
-      
-        valor = datos.pop(key, "N/A")
-        print(f"{key}: {valor}")
+    info = employee_info.copy()
 
+    nombre   = info.pop("Name",   "N/A")
+    salary = info.pop("Salary", "N/A")
+    rol   = info.pop("Role",   "N/A")
 
-    if len(datos) > 0:
-        for clave, valor in datos.items():
-            print(f"{clave}: {valor}")
+    print(f"Name: {nombre}")
+    print(f"Salary: {salary}")
+    print(f"Role: {rol}")
+
+    if info:
+        for key, value in info.items():
+            print(f"{key}: {value}")
     else:
         print("No other info!")
-
-
-employee_info = {
-    "Name": "Diego",
-    "Salary": 5000000,
-    "Role": "Janitor",
-    "Years at company": 9001,
-    "Hours per week": 2
-}
-employee_print(employee_info)
