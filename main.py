@@ -42,5 +42,5 @@ def main():
             print("Invalid option selected!")
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
