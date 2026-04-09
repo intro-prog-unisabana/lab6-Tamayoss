@@ -19,7 +19,7 @@ def update_stock(inventory):
     fruit = input("Enter the name of the fruit to update: ").strip()
     # ¿Es esta la forma correcta de iterar sobre el diccionario?
     if fruit in inventory:
-        amount = int(input(f"Enter amount to add to {fruit}'s stock: "))
+        amount = input(f"Enter amount to add to {fruit}'s stock: ")
         # ¿Es esta operación válida?
         inventory[fruit] += amount
         print(f"{fruit} stock increased by {amount}.\n")
